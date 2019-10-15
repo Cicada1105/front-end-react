@@ -1,13 +1,11 @@
 import React from 'react';
-import './App.css';
+import Student from "./StudentDefault"
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          Hello World
-        </header>
+        <Student />
       </div>
     );
   }

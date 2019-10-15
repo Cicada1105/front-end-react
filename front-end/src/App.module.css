@@ -1,0 +1,15 @@
+.App {
+
+}
+.link:hover {
+  cursor:hand;
+  color:red;
+}
+.login {
+  float:right;
+}
+.bodyContainer:after {
+  content:"";
+  display:table;
+  clear:both;
+}

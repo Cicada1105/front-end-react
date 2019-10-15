@@ -1,8 +1,9 @@
 .App {
 
 }
-.navLink {
-  float:left;
+.link:hover {
+  cursor:hand;
+  color:red;
 }
 .login {
   float:right;

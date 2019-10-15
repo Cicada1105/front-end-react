@@ -1,5 +1,5 @@
 import React from 'react'
-import { Header, Navigation, Body, Footer } from './View'
+import { Navigation } from './View'
 
 class StudentDefault extends React.Component {
   constructor() {
@@ -7,34 +7,29 @@ class StudentDefault extends React.Component {
     this.state = {
       links: [
         {
-          "value": "View",
-          "href": "view.html",
-          "classID":"navLink"
+          "value": "Colleges",
+          "href": "",
+          "classID":""
         },
         {
-          "value":"Add",
-          "href":"add.html",
-          "classID": "navLink"
+          "value":"Department",
+          "href":"",
+          "classID": ""
         },
         {
-          "value":"Remove",
-          "href":"remove.html",
-          "classID":"navLink"
+          "value":"Program",
+          "href":"",
+          "classID":""
         },
         {
-          "value":"Edit",
-          "href":"edit.html",
-          "classID":"navLink"
+          "value":"Concentration",
+          "href":"",
+          "classID":""
         },
         {
-          "value":"Login",
-          "href":"Login.html",
-          "classID":"login"
-        }
-      ],
-      columns: [
-        {
-          "classID":"main"
+          "value":"Prefix",
+          "href":"",
+          "classID":""
         }
       ],
       headerVal:"View Page"
@@ -43,10 +38,10 @@ class StudentDefault extends React.Component {
   render() {
     return (
       <div>
-        <Header header="Lewis University Masters Program"/>
+        {/*<Header header="Lewis University Masters Program"/>*/}
         <Navigation links={ this.state.links } />
-        <Body columns={ this.state.columns } headerVal={ this.state.headerVal }/>
-        <Footer />
+        {/*<Body headerVal={ this.state.headerVal }/>
+        <Footer />*/}
       </div>
     )
   }

@@ -5,41 +5,15 @@ class StudentDefault extends React.Component {
   constructor() {
     super();
     this.state = {
-      links: [
-        {
-          "value": "Colleges",
-          "href": "",
-          "classID":""
-        },
-        {
-          "value":"Department",
-          "href":"",
-          "classID": ""
-        },
-        {
-          "value":"Program",
-          "href":"",
-          "classID":""
-        },
-        {
-          "value":"Concentration",
-          "href":"",
-          "classID":""
-        },
-        {
-          "value":"Prefix",
-          "href":"",
-          "classID":""
-        }
-      ],
-      headerVal:"View Page"
+      headerVal:"View Page",
+      class:"navbar"
     }
   }
   render() {
     return (
       <div>
         {/*<Header header="Lewis University Masters Program"/>*/}
-        <Navigation links={ this.state.links } />
+        <Navigation links={ this.state.links } classID={ this.state.class }/>
         {/*<Body headerVal={ this.state.headerVal }/>
         <Footer />*/}
       </div>

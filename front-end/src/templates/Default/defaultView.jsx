@@ -1,4 +1,5 @@
 import React from 'react'
+//import { Route, Link, BrowserRouter } from 'react-router-dom'
 import styles from "./View.module.css";
 
 class Header extends React.Component {
@@ -26,69 +27,13 @@ class Navigation extends React.Component {
     return (
       <div style={ navStyle } className={ styles.navbar }>
         <Link name="Lewis University" float="left" />
-        <DropDown />
+        <DropDown links={ this.props.links }/>
       </div>
     );
   }
 }
 
 class DropDown extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      links: [
-          {
-            "name":"Colleges",
-            "dropdownLinks": {
-              "list":"",
-              "search":"",
-              "add":""
-            }
-          },
-          {
-            "name":"Department",
-            "dropdownLinks": {
-              "list":"",
-              "search":"",
-              "add":""
-            }
-          },
-          {
-            "name":"Program",
-            "dropdownLinks": {
-              "list":"",
-              "search":"",
-              "add":""
-            }
-          },
-          {
-            "name":"Concentration",
-            "dropdownLinks": {
-              "list":"",
-              "search":"",
-              "add":""
-            }
-          },
-          {
-            "name":"Course",
-            "dropdownLinks": {
-              "list":"",
-              "search":"",
-              "add":""
-            }
-          },
-          {
-            "name":"Phrase",
-            "dropdownLinks": {
-              "list":"",
-              "search":"",
-              "add":""
-            }
-          }
-      ]
-    }
-  }
   render() {
     const ddStyle = {
       float:"left",
@@ -96,12 +41,13 @@ class DropDown extends React.Component {
     };
     return (
       <React.Fragment>
-       { this.state.links.map((val, i) =>
+       { this.props.links.map((val, i) =>
           <div style={ ddStyle } className={ styles.dropdown } key={ i }>
             <Link name={ val.name } key={ val.name }/>
             <DropDownContent content={ val.dropdownLinks } key={ i }/>
           </div>
-      )}</React.Fragment>
+      )}
+      </React.Fragment>
     );
   }
 }
@@ -114,7 +60,7 @@ class Link extends React.Component {
       float: props.float
     }
   }
-  runAlert = () => {
+  function runAlert() {
     alert("Function running inside Link class");
   }
   render() {
@@ -130,30 +76,20 @@ class Link extends React.Component {
 }
 
 class DropDownContent extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      dropDownItems: [
-        "List Colleges",
-        "Search Colleges",
-        "Add Colleges"
-      ]
-    }
-
-    this.anchors = [props.list, props.search, props.add];
-  }
   render() {
+    let ddLinks = [];
+    for (let property in this.props.content) {
+      ddLinks.push(<a href={this.props.content[property]} key={ property }>{ property }</a>);
+    }
     return (
       <div className={ styles.dropdownContent }>
-      { this.state.dropDownItems.map((val, i) =>
-          <a href={ this.anchors[i] } key={ i }>{ val }</a>
-      ) }
+        { ddLinks }
       </div>
     )
   }
 }
 
+/*
 class Body extends React.Component {
   render() {
     const colRowsStyle = {
@@ -188,5 +124,5 @@ class Footer extends React.Component {
     );
   }
 }
-
+*/
 export { Navigation }

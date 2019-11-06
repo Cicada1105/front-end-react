@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './applications/Admin/App.jsx';
+import "./index.css";
 //import * as serviceWorker from './serviceWorker';
 /*
 This page will be the home page of the entire application

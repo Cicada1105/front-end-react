@@ -1,0 +1,81 @@
+/*
+  This is a CSS modules.  The components of this CSS file
+  Are scopped only for the View and no other file.
+  Because the View is going to be the building blocks
+  for every page, this styling will be seen on every Page
+  that View is used
+*/
+.navbar {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #263238;
+  overflow:hidden;
+  list-style:none;
+  padding:0px;
+  width:100%;
+  top:0px;
+}
+.navbar > li {
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+}
+.dropwdown {
+  overflow:hidden;
+}
+.dropdown:hover, .link:hover {
+  background-color:red;
+  cursor:pointer;
+}
+.link {
+  background-color: inherit;
+  font-family: inherit;
+  text-decoration:none;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  margin: 0px;
+}
+.navbar li:hover{
+  background-color:red;
+}
+.dropdownContent {
+  display: none;
+  position: absolute;
+  list-style-type:none;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  padding-left:0px;
+  margin-top:14px;
+  margin-left:-16px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdownContent li:hover{
+    background-color: #ddd;
+}
+.dropdownContent li a {
+  float: none;
+  left:0px;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown:hover .dropdownContent{
+  display:block;
+}
+/*
+.link {
+  background-color: inherit;
+  font-family:inherit;
+  color:white;
+  position:relative;
+  text-align:center;
+  padding:14px 16px;
+  font-size:16px;
+  border:none;
+}
+*/

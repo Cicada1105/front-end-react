@@ -1,11 +1,11 @@
 import React from 'react'
-import { Link, Route, BrowserRouter as Router } from 'react-router-dom'
+import { Link, BrowserRouter as Router } from 'react-router-dom'
 import { HomeRouter } from '../Home/router.jsx'
 import { CollegeRouter } from '../Colleges/router.jsx'
 import { ConcentrationRouter } from '../Concentration/router.jsx'
 import { CourseRouter } from '../Course/router.jsx'
 import { DepartmentRouter } from '../Department/router.jsx'
-import { PhraseRouter } from '../Phrase/router.jsx'
+//import { PhraseRouter } from '../Phrase/router.jsx'
 import { ProgramRouter } from '../Program/router.jsx'
 
 //Include homepage for admin
@@ -20,7 +20,7 @@ export class Routing extends React.Component {
       <Router>
         <ul className={ styles.navbar }>
           <li style={{ float:"left" }}>
-            <Link to="/Admin/Colleges/List" className={ styles.link }>Lewis University</Link>
+            <Link to="/Admin/Home" className={ styles.link }>Lewis University</Link>
           </li>
           <li style={{ float:"left" }}>
             <Link to="/Admin/Course/List" className={ styles.link }>Add User</Link>
@@ -140,7 +140,7 @@ export class Routing extends React.Component {
             /*    Phrase    */
             /****************/
           }
-          <li style={{ float:"left" }} className={ styles.dropdown }>
+          {/*<li style={{ float:"left" }} className={ styles.dropdown }>
             <Link to="/Admin/Phrase/List" className={ styles.link }>Phrase</Link>
               <ul className={ styles.dropdownContent }>
                   <li>
@@ -156,7 +156,7 @@ export class Routing extends React.Component {
                       <Link to="/Admin/Phrase/Delete">Delete</Link>
                   </li>
               </ul>
-          </li>
+          </li>*/}
           <li style={{ float:"left" }}>
             <Link to="" className={ styles.link }>Logout</Link>
           </li>
@@ -188,7 +188,7 @@ export class Routing extends React.Component {
         {/* Course  */}
         <CourseRouter />
         {/* Phrase  */}
-        <PhraseRouter />
+        {/*<PhraseRouter />*/}
       </Router>
     );
   }
